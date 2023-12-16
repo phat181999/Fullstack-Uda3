@@ -1,0 +1,12 @@
+<div class="header">
+    <h1>My Store Project</h1>
+    <hr>
+    <div class="menu">
+        <div class="menu-item" [routerLink]="['/product']">Products</div>
+        <div class="vl"></div>
+        <div class="menu-item" [routerLink]="['/cart']">
+            <span style="color:red ;">{{itemsInCart}} </span>
+            <span>Cart</span>
+        </div>
+    </div>
+</div>

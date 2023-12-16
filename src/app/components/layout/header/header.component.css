@@ -1,0 +1,32 @@
+.header {
+    text-align: center;
+    background: #33B5E5;
+    color: #fff;
+    padding: 12px;
+    max-width: 100%;
+}
+
+a {
+    color: #ffffff;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-item {
+    width: 50%;
+    cursor: pointer;
+}
+
+.vl {
+    border-left: 2px solid #ffffff;
+    height: 30px;
+
+}
+
+.counter {
+    display: flex;
+}

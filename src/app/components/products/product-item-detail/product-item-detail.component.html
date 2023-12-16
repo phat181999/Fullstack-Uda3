@@ -1,0 +1,22 @@
+<div class="detail-container">
+    <div *ngIf="loading;else productImageLoading">
+        <app-loading-indicator></app-loading-indicator>
+    </div>
+    <ng-template #productImageLoading>
+        <img class="product-image" src="{{ product.url }}" alt="product-detail-image">
+        <div class="detail-item">
+            <h3>{{ product.name }}</h3>
+            <p>${{ product.price }}</p>
+            <select class="select-input" [(ngModel)]="amount">
+                <option *ngFor="let option of selectOptions" [value]="option.value">
+                    {{option.value}}</option>
+            </select>
+            <div style="margin-top: 10px;">
+                <button class="btn btn-primary" (click)=addProductToCart(product,amount);>
+                    Add To Cart
+                </button>
+                <div class="back-link" [routerLink]="['/product']">Back to products</div>
+            </div>
+        </div>
+    </ng-template>
+</div>

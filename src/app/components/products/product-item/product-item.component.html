@@ -1,0 +1,9 @@
+<div class="product-container">
+    <img class="product-image" src="{{product.url}}" alt="product-image" (click)="navigateToProductDetail(product.id)">
+    <p>{{product.name}}</p>
+    <p>{{product.price}}</p>
+    <select class="select-input" [(ngModel)]="amount">
+        <option *ngFor="let option of selectOptions" [value]="option.value">{{option.value}}</option>
+    </select>
+    <button class="btn btn-primary" (click)="addToCart(product,amount)"> Add to Cart</button>
+</div>

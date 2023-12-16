@@ -1,0 +1,12 @@
+<div class="product-index">
+    <div *ngIf="loading;else productsLoading">
+        <app-loading-indicator></app-loading-indicator>
+    </div>
+
+    <ng-template #productsLoading>
+        <div *ngFor="let product of productList">
+            <app-product-item [product]="product">
+            </app-product-item>
+        </div>
+    </ng-template>
+</div>
